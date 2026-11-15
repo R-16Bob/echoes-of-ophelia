@@ -1,0 +1,15 @@
+{
+  "name": "echoes-of-ophelia",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "description": "残响学园 · 爱丽丝的寻人笔记 —— 文字向肉鸽生存恐怖 DEMO",
+  "scripts": {
+    "start": "node server.mjs",
+    "open": "node server.mjs --open",
+    "verify": "node scripts/verify.mjs",
+    "test": "node scripts/verify.mjs && node scripts/smoke.mjs 6",
+    "sim": "node scripts/smoke.mjs 20",
+    "balance": "node scripts/balance.mjs 12"
+  }
+}

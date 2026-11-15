@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="506" viewBox="0 0 900 506">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#06070a"/>
+      <stop offset="0.62" stop-color="#0b0e13"/>
+      <stop offset="1" stop-color="#121820"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#1b2430"/>
+      <stop offset="0.55" stop-color="#121820"/>
+      <stop offset="1" stop-color="#0b0e13"/>
+    </linearGradient>
+    <linearGradient id="shaft" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#cfdcd6" stop-opacity="0.17"/>
+      <stop offset="0.5" stop-color="#cfdcd6" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#cfdcd6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0e13"/>
+      <stop offset="0.65" stop-color="#06070a"/>
+      <stop offset="1" stop-color="#121820"/>
+    </linearGradient>
+    <linearGradient id="pianoBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2430"/>
+      <stop offset="0.35" stop-color="#121820"/>
+      <stop offset="1" stop-color="#040506"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e3ebe6" stop-opacity="0.85"/>
+      <stop offset="0.28" stop-color="#cfdcd6" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#cfdcd6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="0.46" cy="0.44" r="0.74">
+      <stop offset="0.4" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="fogBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="grain" filterUnits="userSpaceOnUse" x="0" y="0" width="900" height="506" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.84" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="900" height="506" fill="url(#bg)"/>
+  <rect y="330" width="900" height="176" fill="url(#floor)"/>
+  <path d="M0 330 L900 330" stroke="#1b2430" stroke-width="1.5" opacity="0.45"/>
+  <g stroke="#1b2430" stroke-width="1" opacity="0.22" fill="none">
+    <path d="M0 360 L900 360 M0 400 L900 400 M0 450 L900 450"/>
+    <path d="M214 330 L70 506 M450 330 L450 506 M686 330 L830 506"/>
+    <path d="M64 0 L64 330 M708 0 L708 330"/>
+  </g>
+
+  <g id="windows">
+    <path d="M78 254 L78 80 C78 42 108 18 146 18 C184 18 214 42 214 80 L214 254 Z" fill="#050608"/>
+    <path d="M86 248 L86 82 C86 50 112 27 146 27 C180 27 206 50 206 82 L206 248 Z" fill="url(#glass)"/>
+    <path d="M236 258 L236 94 C236 58 264 34 300 34 C336 34 364 58 364 94 L364 258 Z" fill="#050608"/>
+    <path d="M244 252 L244 96 C244 62 270 43 300 43 C330 43 356 62 356 96 L356 252 Z" fill="url(#glass)"/>
+    <circle cx="186" cy="82" r="54" fill="url(#moon)"/>
+    <circle cx="186" cy="82" r="15" fill="#cfdcd6" opacity="0.55" filter="url(#glow)"/>
+    <circle cx="318" cy="112" r="2" fill="#cfdcd6" opacity="0.55"/>
+    <g fill="#cfdcd6" opacity="0.35">
+      <circle cx="266" cy="90" r="1"/>
+      <circle cx="282" cy="142" r="0.8"/>
+      <circle cx="336" cy="76" r="1.1"/>
+      <circle cx="124" cy="126" r="0.9"/>
+      <circle cx="160" cy="62" r="0.7"/>
+    </g>
+    <g stroke="#050608" stroke-width="5" fill="none">
+      <path d="M146 19 L146 254 M108 120 L214 120 M116 62 L146 62 M176 62 L206 62"/>
+      <path d="M300 34 L300 258 M258 132 L356 132 M266 78 L300 78 M334 78 L356 78"/>
+    </g>
+    <g stroke="#cfdcd6" stroke-opacity="0.1" stroke-width="1" fill="none">
+      <path d="M86 248 L86 82 C86 50 112 27 146 27"/>
+      <path d="M244 252 L244 96 C244 62 270 43 300 43"/>
+    </g>
+    <g fill="#cfdcd6" opacity="0.06" filter="url(#soft)">
+      <path d="M90 86 L94 246 L118 246 L112 78 Z"/>
+      <path d="M250 101 L254 248 L276 248 L270 95 Z"/>
+    </g>
+  </g>
+
+  <g id="curtains">
+    <path d="M354 12 C382 28 376 70 398 96 C420 122 392 164 414 196 C436 228 410 268 428 306 C442 336 430 360 446 380 L480 380 C462 340 478 306 456 270 C434 234 462 198 438 162 C414 126 438 90 416 58 C404 40 404 24 400 12 Z" fill="#1b2430" opacity="0.9"/>
+    <path d="M372 18 C400 40 392 82 414 112 C436 142 410 178 430 212 C450 246 426 282 442 318 C454 344 446 362 456 380 L484 380 C470 342 486 310 466 276 C446 242 470 208 448 174 C426 140 450 104 430 72 C418 52 414 32 412 16 Z" fill="#263039" opacity="0.55"/>
+    <g stroke="#cfdcd6" stroke-opacity="0.13" fill="none">
+      <path d="M382 38 C402 58 394 92 412 118 C430 144 410 176 426 204"/>
+      <path d="M410 44 C426 66 418 98 434 124 C450 150 432 184 446 214 C460 244 442 276 456 306"/>
+      <path d="M440 82 C452 102 446 130 458 154 C470 178 454 206 466 232"/>
+    </g>
+    <path d="M350 14 C370 32 366 60 386 84 L400 72 C380 46 386 28 368 12 Z" fill="#121820" opacity="0.8"/>
+    <path d="M438 318 C460 338 456 360 472 380 L438 380 C426 358 432 336 438 318 Z" fill="#cfdcd6" opacity="0.04"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M104 88 L248 46 L676 506 L388 506 Z" fill="url(#shaft)"/>
+    <path d="M150 32 L246 22 L700 506 L512 506 Z" fill="url(#shaft)" opacity="0.5"/>
+    <path d="M266 116 L344 92 L720 506 L596 506 Z" fill="url(#shaft)" opacity="0.32"/>
+  </g>
+
+  <g id="piano">
+    <path d="M354 344 C410 318 508 308 610 319 C700 329 760 352 778 384 C790 408 770 428 730 434 L436 434 C390 432 360 414 352 388 Z" fill="url(#pianoBody)"/>
+    <path d="M354 344 C410 318 508 308 610 319 C700 329 760 352 778 384" fill="none" stroke="#cfdcd6" stroke-opacity="0.32" stroke-width="2"/>
+    <path d="M352 388 C360 414 390 432 436 434 L730 434 C770 428 790 408 778 384" fill="none" stroke="#cfdcd6" stroke-opacity="0.1" stroke-width="1.2"/>
+    <path d="M414 350 L654 166 L754 220 L554 360 Z" fill="#131a22"/>
+    <path d="M414 350 L654 166 L754 220" fill="none" stroke="#cfdcd6" stroke-opacity="0.4" stroke-width="2.2"/>
+    <path d="M654 166 L622 352" stroke="#cfdcd6" stroke-opacity="0.1" stroke-width="1"/>
+    <path d="M438 346 L646 182" stroke="#cfdcd6" stroke-opacity="0.08" stroke-width="1"/>
+    <path d="M754 220 L742 236" stroke="#cfdcd6" stroke-opacity="0.18" stroke-width="1"/>
+    <path d="M698 342 L680 226" stroke="#1b2430" stroke-width="6"/>
+    <path d="M698 342 L680 226" stroke="#cfdcd6" stroke-opacity="0.24" stroke-width="1.4"/>
+    <path d="M445 330 C538 308 642 316 704 338" stroke="#cfdcd6" stroke-opacity="0.09" fill="none"/>
+    <path d="M326 350 L406 333 L425 368 L334 387 Z" fill="#07090c"/>
+    <path d="M331 353 L399 340 L411 359 L333 374 Z" fill="#1b2430"/>
+    <path d="M331 353 L399 340 L411 359 L333 374 Z" fill="#cfdcd6" opacity="0.1"/>
+    <g stroke="#cfdcd6" stroke-opacity="0.34" stroke-width="0.8">
+      <path d="M338 358 L345 372 M349 356 L356 371 M360 354 L367 369 M371 352 L378 367 M382 350 L389 365 M393 348 L400 363"/>
+    </g>
+    <g stroke="#050608" stroke-width="2.4">
+      <path d="M346 356 L353 370 M368 352 L375 366 M390 348 L397 362"/>
+    </g>
+    <path d="M326 350 L406 333" stroke="#cfdcd6" stroke-opacity="0.14" stroke-width="1.2"/>
+    <path d="M430 432 L436 490 L450 490 L445 430 Z" fill="#040506"/>
+    <path d="M700 432 L706 488 L720 488 L714 430 Z" fill="#040506"/>
+    <path d="M572 434 L576 478 L588 478 L584 432 Z" fill="#040506"/>
+    <path d="M433 434 L438 488 M704 434 L709 486 M575 436 L578 476" stroke="#cfdcd6" stroke-opacity="0.16" stroke-width="1"/>
+    <path d="M433 434 L438 488 M704 434 L709 486" stroke="#cfdcd6" stroke-opacity="0.05" stroke-width="2.5"/>
+    <ellipse cx="443" cy="491" rx="7" ry="4" fill="#050608"/>
+    <ellipse cx="713" cy="489" rx="7" ry="4" fill="#050608"/>
+    <path d="M386 432 L389 470 M393 432 L398 468" stroke="#050608" stroke-width="3"/>
+    <path d="M380 471 L404 468 L404 473 L380 476 Z" fill="#050608"/>
+    <path d="M464 340 C484 324 522 316 560 318" stroke="#cfdcd6" stroke-opacity="0.12" fill="none"/>
+    <path d="M680 180 C676 168 690 156 704 160 C716 164 716 176 708 184" fill="#050608"/>
+  </g>
+
+  <g id="chairs">
+    <g transform="translate(92 390) rotate(-18)">
+      <rect x="0" y="0" width="58" height="9" rx="1" fill="#050608"/>
+      <path d="M4 0 L4 -54 L12 -54 L12 0 M28 0 L28 -58 L36 -58 L36 0 M50 0 L50 -54 L58 -54 L58 0" fill="#050608"/>
+      <path d="M4 -54 L58 -54 L58 -46 L4 -46 Z" fill="#050608"/>
+      <path d="M4 7 L-7 58 M50 7 L60 58" stroke="#050608" stroke-width="5"/>
+      <path d="M6 9 L-4 54 M52 9 L61 54" stroke="#cfdcd6" stroke-opacity="0.08" stroke-width="1"/>
+      <path d="M4 -54 L58 -54" stroke="#cfdcd6" stroke-opacity="0.12" stroke-width="1"/>
+    </g>
+    <g transform="translate(214 415) rotate(14)">
+      <rect x="0" y="0" width="56" height="8" rx="1" fill="#050608"/>
+      <path d="M4 0 L4 -50 L12 -50 L12 0 M27 0 L27 -55 L35 -55 L35 0 M49 0 L49 -50 L56 -50 L56 0" fill="#050608"/>
+      <path d="M4 -50 L56 -50 L56 -43 L4 -43 Z" fill="#050608"/>
+      <path d="M4 7 L-6 54 M49 7 L58 54" stroke="#050608" stroke-width="5"/>
+      <path d="M5 9 L-4 50 M50 9 L57 50" stroke="#cfdcd6" stroke-opacity="0.08" stroke-width="1"/>
+    </g>
+    <g transform="translate(310 394) rotate(-38)">
+      <rect x="0" y="0" width="48" height="7" rx="1" fill="#050608"/>
+      <path d="M4 0 L4 -42 L11 -42 L11 0 M22 0 L22 -47 L29 -47 L29 0 M41 0 L41 -42 L48 -42 L48 0" fill="#050608"/>
+      <path d="M4 -42 L48 -42 L48 -36 L4 -36 Z" fill="#050608"/>
+      <path d="M4 6 L-4 46 M41 6 L49 46" stroke="#050608" stroke-width="4"/>
+    </g>
+    <g stroke="#050608" stroke-width="3" fill="none">
+      <path d="M150 420 L180 438 M170 430 L146 452"/>
+    </g>
+  </g>
+
+  <g fill="#cfdcd6" opacity="0.12">
+    <path d="M420 458 L455 450 L470 459 L436 468 Z" transform="rotate(-8 445 459)"/>
+    <path d="M536 444 L570 439 L580 448 L548 454 Z" transform="rotate(7 558 447)"/>
+    <path d="M300 478 L330 472 L339 480 L310 486 Z" transform="rotate(-14 320 479)"/>
+    <path d="M640 466 L666 461 L675 468 L649 474 Z" transform="rotate(4 657 468)"/>
+  </g>
+  <g stroke="#cfdcd6" stroke-opacity="0.06" fill="none">
+    <path d="M420 458 L440 454 M536 444 L558 440 M300 478 L320 474"/>
+  </g>
+
+  <g fill="#cfdcd6" opacity="0.32">
+    <circle cx="320" cy="192" r="0.9"/>
+    <circle cx="356" cy="238" r="0.7"/>
+    <circle cx="395" cy="282" r="1"/>
+    <circle cx="440" cy="334" r="0.6"/>
+    <circle cx="490" cy="382" r="0.8"/>
+    <circle cx="382" cy="152" r="0.6"/>
+    <circle cx="284" cy="290" r="0.7"/>
+  </g>
+
+  <g filter="url(#fogBlur)">
+    <ellipse cx="424" cy="466" rx="330" ry="40" fill="#1b2430" opacity="0.55"/>
+    <ellipse cx="160" cy="486" rx="240" ry="34" fill="#1b2430" opacity="0.45"/>
+    <ellipse cx="700" cy="480" rx="250" ry="32" fill="#1b2430" opacity="0.4"/>
+  </g>
+  <g fill="#cfdcd6" opacity="0.07" filter="url(#soft)">
+    <path d="M140 390 L230 370 L300 506 L200 506 Z"/>
+    <path d="M520 366 L580 360 L640 506 L560 506 Z"/>
+    <ellipse cx="186" cy="438" rx="84" ry="16"/>
+  </g>
+
+  <rect width="900" height="506" fill="url(#vignette)"/>
+  <rect width="900" height="506" fill="#ffffff" filter="url(#grain)" opacity="0.1"/>
+  <text x="876" y="486" font-size="12" fill="#cfdcd6" fill-opacity="0.35" font-family="serif" text-anchor="end">占位图 · MUSIC 900×506</text>
+</svg>

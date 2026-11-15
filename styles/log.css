@@ -1,0 +1,103 @@
+/* 事件日志抽屉 + 伤害类型 / 弱点标签 */
+
+.log-toggle {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+  background: rgba(8, 12, 16, 0.92);
+  border: 1px solid var(--line-2);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.log-toggle:hover,
+.log-toggle.is-open { color: var(--mint); border-color: rgba(143, 224, 182, 0.45); }
+.log-toggle b {
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--mint);
+  font-weight: 400;
+}
+
+.log-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 58;
+  width: min(400px, 92vw);
+  display: flex;
+  flex-direction: column;
+  background: #06090d;
+  border-left: 1px solid var(--line-2);
+  box-shadow: -24px 0 48px rgba(0, 0, 0, 0.45);
+  animation: logIn 0.18s ease-out both;
+}
+@keyframes logIn {
+  from { transform: translateX(16px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.log-drawer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.log-drawer__title { font-family: var(--serif); font-size: 17px; color: var(--text); letter-spacing: 0.1em; }
+.log-drawer__sub { margin-top: 4px; font-family: var(--sans); font-size: 10px; letter-spacing: 0.12em; color: var(--text-faint); }
+.log-drawer__body { flex: 1; overflow-y: auto; padding: 10px 0; }
+.log-drawer__empty { padding: 32px 18px; font-family: var(--serif); color: var(--text-faint); text-align: center; }
+.log-entry {
+  display: grid;
+  grid-template-columns: 34px 44px minmax(0, 1fr);
+  gap: 6px;
+  align-items: baseline;
+  padding: 7px 18px;
+  border-left: 2px solid transparent;
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+.log-entry:nth-child(odd) { background: rgba(255, 255, 255, 0.015); }
+.log-entry__n { font-family: var(--serif); font-size: 10px; color: var(--text-faint); }
+.log-entry__kind { font-size: 10px; letter-spacing: 0.08em; color: var(--text-faint); }
+.log-entry--damage { border-left-color: rgba(196, 92, 100, 0.6); }
+.log-entry--damage .log-entry__kind { color: var(--blood); }
+.log-entry--heal { border-left-color: rgba(143, 224, 182, 0.45); }
+.log-entry--heal .log-entry__kind { color: var(--mint); }
+.log-entry--xp .log-entry__kind,
+.log-entry--level .log-entry__kind { color: var(--gold); }
+.log-entry--card .log-entry__kind { color: #c98ae0; }
+.log-entry--check .log-entry__kind { color: var(--mint); }
+.log-entry--fail .log-entry__kind { color: var(--blood); }
+.log-entry--combat { border-left-color: rgba(196, 92, 100, 0.35); }
+.log-entry--clue .log-entry__kind,
+.log-entry--shop .log-entry__kind { color: var(--gold); }
+.log-drawer__foot {
+  padding: 10px 18px 16px;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+}
+
+/* 弱点标签在敌人信息行里换行不挤 */
+.enemy__stats { flex-wrap: wrap; }
+.enemy__stats .tag { margin-left: 2px; }
+
+@media (max-width: 760px) {
+  .log-toggle { right: 12px; bottom: 12px; padding: 8px 11px; }
+  .log-entry { grid-template-columns: 30px 40px minmax(0, 1fr); padding: 7px 14px; }
+}
